@@ -119,6 +119,22 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"assets/js/index.js":[function(require,module,exports) {
 console.log("Hello world");
+var flkty = new Flickity('.carousel', {
+  imagesLoaded: true,
+  percentPosition: false,
+  fullscreen: true,
+  pageDots: false,
+  prevNextButtons: false,
+  freeScroll: true,
+  on: {
+    ready: function ready() {
+      console.log('Flickity is ready');
+    },
+    select: function select(index) {
+      console.log('Slide changed to' + index);
+    }
+  }
+});
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
