@@ -31821,6 +31821,58 @@ video {
           animation: bounce 1s infinite;
 }
 
+.hov-underline:hover span {
+  width: 100%;
+}
+
+#cross {
+  margin-left: 3.5rem;
+  bottom: 25%;
+  top: 25%;
+  background: white;
+  height: 119px;
+  position: absolute;
+  width: 7px;
+}
+
+#cross:after {
+  background: white;
+  content: "";
+  height: 7px;
+  left: -55px;
+  position: absolute;
+  top: 55px;
+  width: 119px;
+}
+
+.carousel {
+  height: 800px;
+  width: 100%;
+}
+
+.carousel-cell {
+  display: block;
+  /* set min-width, allow images to set cell width */
+  min-width: 350px;
+  max-width: 100%;
+  margin-right: 16px;
+  /* vertically center */
+  top: 50%;
+  transform: translateY(-50%)
+}
+
+.carousel.is-fullscreen .carousel-cell{
+  max-height: 100%;
+}
+
+.flickity-slider {
+  position: relative;
+}
+
+.carousel-cell.is-selected > .caption {
+  visibility: visible;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
