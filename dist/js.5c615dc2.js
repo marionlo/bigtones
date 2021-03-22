@@ -126,6 +126,7 @@ var flkty = new Flickity('.carousel', {
   pageDots: false,
   prevNextButtons: false,
   freeScroll: true,
+  cellAlign: 'left',
   on: {
     ready: function ready() {
       console.log('Flickity is ready');

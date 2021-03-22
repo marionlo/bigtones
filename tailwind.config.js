@@ -20,6 +20,9 @@ module.exports = {
         '53' : '12.813rem',
         '54': '13.375rem',
        },
+       margin: {
+        '90' : '22rem',
+       },
        inset: {
         '90': '23rem',
        },

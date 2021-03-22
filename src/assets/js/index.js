@@ -7,6 +7,7 @@ var flkty = new Flickity( '.carousel', {
   pageDots: false,
   prevNextButtons: false,
   freeScroll: true,
+  cellAlign: 'left',
 on: {
   ready: function() {
     console.log('Flickity is ready');
