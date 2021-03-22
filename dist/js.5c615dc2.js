@@ -135,7 +135,16 @@ var flkty = new Flickity('.carousel', {
       console.log('Slide changed to' + index);
     }
   }
-});
+}); // Select elements here
+
+var video = document.getElementById('video');
+var videoControls = document.getElementById('video-controls');
+var videoWorks = !!document.createElement('video').canPlayType;
+
+if (videoWorks) {
+  video.controls = false;
+  videoControls.classList.remove('hidden');
+}
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
