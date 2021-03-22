@@ -31845,8 +31845,7 @@ video {
   width: 119px;
 }
 
-.carousel {
-  height: 800px;
+.carousel .flickity-viewport {
   width: 100%;
 }
 
@@ -31869,8 +31868,12 @@ video {
   position: relative;
 }
 
+.caption {
+  transition: visibility 0s, opacity 0.2s linear;
+}
+
 .carousel-cell.is-selected > .caption {
-  visibility: visible;
+  opacity: 1;
 }
 
 @media (min-width: 640px) {
@@ -187837,5 +187840,7 @@ video {
     animation: bounce 1s infinite;
   }
 }
+
+
 
 /*# sourceMappingURL=/css.5ec3a257.css.map */

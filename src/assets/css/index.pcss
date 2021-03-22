@@ -6,7 +6,6 @@
   width: 100%;
 }
 
-
   #cross {
       margin-left: 3.5rem;
       bottom: 25%;
@@ -27,10 +26,9 @@
     }
 
 
-    .carousel {
-      height: 800px;
-      width: 100%;
-    }
+    .carousel .flickity-viewport {
+  width: 100%;
+}
 
     .carousel-cell {
       display: block;
@@ -51,6 +49,11 @@
       position: relative;
     }
 
-    .carousel-cell.is-selected > .caption {
-      visibility: visible;
+    .caption {
+  transition: visibility 0s, opacity 0.2s linear;
     }
+
+    .carousel-cell.is-selected > .caption {
+      opacity: 1;
+    }
+
