@@ -2,61 +2,88 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+button:focus {
+  outline: 0;
+  outline: 0 -webkit-focus-ring-color;
+}
+
 .hov-underline:hover span {
   width: 100%;
 }
 
-  #cross {
-      margin-left: 3.5rem;
-      bottom: 25%;
-      top: 25%;
-      background: white;
-      height: 119px;
-      position: absolute;
-      width: 7px;
-    }
-    #cross:after {
-      background: white;
-      content: "";
-      height: 7px;
-      left: -55px;
-      position: absolute;
-      top: 55px;
-      width: 119px;
-    }
+#cross {
+  margin-left: 3.5rem;
+  bottom: 25%;
+  top: 25%;
+  background: white;
+  height: 119px;
+  position: absolute;
+  width: 7px;
+}
+
+#cross:after {
+  background: white;
+  content: "";
+  height: 7px;
+  left: -55px;
+  position: absolute;
+  top: 55px;
+  width: 119px;
+}
 
 
-
-    .carousel .flickity-viewport {
+.carousel .flickity-viewport {
   width: 100%;
-
 
 }
 
-    .carousel-cell {
-      display: block;
-      /* set min-width, allow images to set cell width */
-      min-width: 350px;
-      max-width: 100%;
-      margin-right: 16px;
-      /* vertically center */
-      top: 50%;
-      transform: translateY(-50%)
-    }
+.flickity-viewport {
+  min-height: 700px;
+}
 
-    .carousel.is-fullscreen .carousel-cell{
-      max-height: 100%;
-    }
+.carousel-cell {
+  display: block;
+  /* set min-width, allow images to set cell width */
+  min-width: 350px;
+  max-width: 100%;
+  margin-right: 16px;
+  /* vertically center */
+  top: 50%;
+  transform: translateY(-50%)
+}
 
-    .flickity-slider {
-      position: relative;
-    }
+.carousel.is-fullscreen .carousel-cell{
+  max-height: 100%;
+}
 
-    .caption {
+.flickity-slider {
+  position: relative;
+}
+
+.caption {
   transition: visibility 0s, opacity 0.2s linear;
-    }
+}
+.carousel-cell.is-selected > .caption {
+  opacity: 1;
+}
 
-    .carousel-cell.is-selected > .caption {
-      opacity: 1;
-    }
+.a {
+  fill: none;
+}
+
+.b, .c {
+  stroke: none;
+}
+
+.c {
+  fill:#fff;
+  }
+
+.video-controls.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+ 
 

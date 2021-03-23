@@ -31851,6 +31851,11 @@ video {
   animation: bounce 1s infinite;
 }
 
+button:focus {
+  outline: 0;
+  outline: 0 -webkit-focus-ring-color;
+}
+
 .hov-underline:hover span {
   width: 100%;
 }
@@ -31879,6 +31884,10 @@ video {
   width: 100%;
 }
 
+.flickity-viewport {
+  min-height: 700px;
+}
+
 .carousel-cell {
   display: block;
   /* set min-width, allow images to set cell width */
@@ -31904,6 +31913,23 @@ video {
 
 .carousel-cell.is-selected > .caption {
   opacity: 1;
+}
+
+.a {
+  fill: none;
+}
+
+.b, .c {
+  stroke: none;
+}
+
+.c {
+  fill:#fff;
+}
+
+.video-controls.hide {
+  opacity: 0;
+  pointer-events: none;
 }
 
 @media (min-width: 640px) {
@@ -188020,6 +188046,9 @@ video {
     animation: bounce 1s infinite;
   }
 }
+
+
+ 
 
 
 

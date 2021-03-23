@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 <!-- JavaScript -->
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js" defer=""></script>
          <title>Bigtone - Homepage</title>
     <script src="/css.5ec3a257.js"></script></head>
         <body class="bg-black">
@@ -32,7 +33,7 @@
          what characterizes this Autumn Winter collection. </div>
    </section>
    <section class="relative flex flex-row justify-between mx-auto font-light font-inter max-w-cat">
-      <div class="relative hov-underline text-ladies"> <a href="#" class="relative text-75xl">Ladies</a>
+      <div class="relative hov-underline text-ladies"> <a href="#" class="relative text-75xl" onclick="validationFunction()">Ladies</a>
          <div class="absolute top-0 right-0">54</div> <span class="absolute left-0 w-0 h-px transition-all bg-ladies bottom-4"></span>
       </div>
       <div class="relative hov-underline text-men"> <a href="#" class="relative text-75xl">Men</a>
@@ -42,7 +43,7 @@
          <div class="absolute top-0 right-0">124</div> <span class="absolute left-0 w-0 h-px transition-all bg-children bottom-4"></span>
       </div>
    </section>
-   <div class="lg:ml-90">
+   <div class="lg:ml-90 lg:pb-48">
    <div class="pt-40 text-white carousel font-inter">
       <div class="carousel-cell"> <img class="carousel-image" src="/item-1.84e02c4d.png" alt="test">
          <h2 class="absolute w-4 text-5xl leading-tight opacity-0 -bottom-6 caption left-8" x-show="">Soft Pants</h2>
@@ -63,16 +64,40 @@
    </div>
    </div>
    <section> 
-      <div class="hidden w-full video-controls" id="video-controls">
-         . . .
-<video controls="" class="object-fill w-full video" id="video" preload="metadata" poster="/video-img.433a7490.png">
-         <source src="/Explose - A decade of digital - Making Off.14d6da96.mp4" type="video/mp4">
+      <div class="relative flex items-center justify-center hidden w-full h-screen mb-12 overflow-hidden video-controls " id="video-controls">
+         <div class="absolute z-30 max-w-xs font-light leading-tight text-white shape text-10xl font-inter left-40 md:left-80">Our Shapes</div>
+         <button data-title="Play (k)" id="play" class="absolute z-30 flex top-96">
+            
+            <svg class="playback-icons" width="34px" height="30px">
+              <use href="#play-icon"></use>
+            </svg>
+            <span class="leading-7 text-white font-inter pl-3.5 shape">Play</span>
+          </button>
+<video controls="" class="absolute z-10 object-fill w-full video" id="video" preload="metadata" poster="/video-img.433a7490.png">
+         <source src="/video.8ea07728.mp4" type="video/mp4">
+
          </video>
+         
          </div>
    
    </section>
-   <footer> </footer>
+
+   
+    
+   <footer>
+      <div>Placeholder</div>
+       </footer>
+
+       <svg style="display: none">
+         <defs>
+
+           <symbol id="play-icon" viewBox="0 0 30 34">
+            <g class="a" transform="translate(30) rotate(90)"><path class="b" d="M17,0,34,30H0Z"></path><path class="c" d="M 17 8.113386154174805 L 6.864252090454102 26 L 27.1357479095459 26 L 17 8.113386154174805 M 17 0 L 34 30 L 0 30 L 17 0 Z"></path></g>
+           </symbol>
+</defs>
+</svg>     
    <script src="/js.5c615dc2.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js"></script>
 
         
     </body>
