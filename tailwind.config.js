@@ -36,6 +36,15 @@ module.exports = {
         children: {
           DEFAULT: '#E0FCB5',
         },
+        cookies: {
+          DEFAULT: '#191919',
+        },
+        lgrey: {
+          DEFAULT: '#FFFFFF80',
+        },
+        dgrey: {
+          DEFAULT: '#FFFFFF1A',
+        }
      },
      height: {
       footer: '488px',
