@@ -37,6 +37,9 @@ module.exports = {
           DEFAULT: '#E0FCB5',
         },
      },
+     height: {
+      footer: '488px',
+     }
      },
   },
   variants: {
