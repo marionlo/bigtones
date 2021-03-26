@@ -118,22 +118,13 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"assets/js/index.js":[function(require,module,exports) {
-console.log("Hello world");
 var flkty = new Flickity('.carousel', {
   imagesLoaded: true,
   percentPosition: false,
   pageDots: false,
   prevNextButtons: false,
   freeScroll: true,
-  cellAlign: 'left',
-  on: {
-    ready: function ready() {
-      console.log('Flickity is ready');
-    },
-    select: function select(index) {
-      console.log('Slide changed to' + index);
-    }
-  }
+  cellAlign: 'left'
 }); // Select elements here
 
 var video = document.getElementById('video');
@@ -219,7 +210,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58356" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50656" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

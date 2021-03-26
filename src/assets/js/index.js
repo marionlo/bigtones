@@ -1,5 +1,3 @@
-console.log("Hello world");
-
 var flkty = new Flickity( '.carousel', {
   imagesLoaded: true,
   percentPosition: false,
@@ -7,16 +5,6 @@ var flkty = new Flickity( '.carousel', {
   prevNextButtons: false,
   freeScroll: true,
   cellAlign: 'left',
-on: {
-  ready: function() {
-    console.log('Flickity is ready');
-
-  },
-  select: function( index ) {
-    console.log( 'Slide changed to' + index );
-
-  }
-}
 });
 
 

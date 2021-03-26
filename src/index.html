@@ -14,12 +14,55 @@
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js" defer></script>
          <title>Bigtone - Homepage</title>
     </head>
-        <body class="bg-black">
+        <body class="bg-black" x-data="{show:false}" x-bind:class="{ 'model-open': show }">
+
    <nav class="relative flex items-end justify-between w-full mx-auto font-light bg-black font-inter h-28 px-14">
       <div class="relative hov-underline"> <a href="#" class="relative text-2xl text-white">BigTone</a> <span
             class="absolute left-0 w-0 h-px transition-all bg-white -bottom-1"></span> </div>
-      <div class="relative hov-underline"> <a href="#" class="relative text-2xl text-white">Menu</a> <span
+            
+               <div class="flex justify-center">
+                   <button @click={show=true} type="button" class="relative text-2xl text-white hov-underline">Menu</Button>
+                     <span
+                     class="absolute left-0 w-0 h-px transition-all bg-white -bottom-1"></span>
+               </div>
+
+
+               <div x-show="show" tabindex="0" class="fixed top-0 bottom-0 left-0 right-0 z-40 w-full overflow-auto">
+                   <div  @click.away="show = false" class="relative z-50 w-full max-w-full mx-auto my-0" >
+                       <div class="flex flex-col h-full h-screen overflow-hidden text-white bg-black" >
+                          
+                          
+                           <nav class="relative flex items-end justify-between w-full mx-auto font-light bg-black font-inter h-28 px-14">
+      <div class="relative hov-underline" @click={show=false}> <a href="#" class="relative text-2xl text-white">BigTone</a> <span
             class="absolute left-0 w-0 h-px transition-all bg-white -bottom-1"></span> </div>
+            <div class="relative hov-underline"> <a href="#" class="relative text-2xl text-white">Menu</a> <span
+               class="absolute left-0 w-0 h-px transition-all bg-white -bottom-1"></span> </div>
+               </nav>
+
+              
+               
+               <div class="flex flex-col items-center text-10xl">
+                  <div class="relative h-48 w-100">
+                  <div class="absolute inset-x-0 bottom-0 z-10 flex items-center transform translate-x-0 translate-y-2/4 cat"><a href="#">Shop</a></div>
+                  <div style="background-image: url('assets/img/menu-img-02.jpeg')" class="absolute inset-x-0 bottom-0 z-0 duration-300 transform translate-x-0 bg-center bg-no-repeat translate-y-2/3 h-menu cat-img"></div>
+               </div>
+               <div class="relative h-48 w-100">
+                  <div class="absolute inset-x-0 bottom-0 z-10 flex items-center transform translate-x-0 translate-y-2/4 cat"><a href="#">Our Story</a></div>
+                  <div style="background-image: url('assets/img/menu-img.png')" class="absolute inset-x-0 bottom-0 z-0 duration-300 transform translate-x-0 bg-center bg-no-repeat translate-y-2/4 h-menu cat-img"></div>
+               </div>
+               <div class="relative h-48 w-100">
+                  <div class="absolute inset-x-0 bottom-0 z-10 flex items-center transform translate-x-0 translate-y-2/4 cat"><a href="#">Lookbook</a></div>
+                  <div style="background-image: url('assets/img/menu-img-03.jpeg')" class="absolute inset-x-0 bottom-0 z-0 duration-300 transform translate-x-0 bg-center bg-no-repeat translate-y-1/3 h-menu cat-img"></div>
+               </div>
+                  
+               </div>
+                          
+                       </div>
+                   </div>
+                   <div class="fixed top-0 bottom-0 left-0 right-0 z-40 w-full h-full overflow-auto bg-black opacity-50"></div>
+               </div>
+           
+
    </nav>
    <main style="background-image:url(assets/img/mission-img.png)"
       class="relative h-full h-screen bg-center bg-top bg-no-repeat bg-auto pb-54 px-14">
@@ -52,7 +95,7 @@
    <div class="lg:ml-90 lg:pb-48">
    <div class="pt-40 text-white carousel font-inter">
       <div class="carousel-cell"> <img class="carousel-image" src="assets/img/item-1.png" alt="test">
-         <h2 class="absolute w-4 text-5xl leading-tight opacity-0 -bottom-6 caption left-8" x-show="">Soft Pants</h2>
+         <h2 class="absolute w-4 text-5xl leading-tight opacity-0 -bottom-6 caption left-8">Soft Pants</h2>
          <h3 class="absolute text-base font-light opacity-0 caption bottom-28 left-7">28€</h3>
       </div>
       <div class="carousel-cell"> <img class="carousel-image" src="assets/img/img-02.png" alt="Test 2">
@@ -153,9 +196,8 @@
          </div>
          
        </div>
-
-
-
+   
+      
 
        <svg style="display: none">
          <defs>

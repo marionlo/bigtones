@@ -48,7 +48,11 @@ module.exports = {
      },
      height: {
       footer: '488px',
-     }
+      menu: '50rem',
+     },
+     spacing: {
+      '100': '50rem',
+    }
      },
   },
   variants: {
