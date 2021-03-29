@@ -59,3 +59,9 @@ window.updatePlayButton = function updatePlayButton() {
 
 video.addEventListener('click', togglePlay);
 
+
+window.addNewClass = function addNewClass(){
+  // Select div element by its id attribute
+  var elem = document.getElementById("toasty");
+  elem.className += " hidden";
+}

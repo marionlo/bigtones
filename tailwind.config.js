@@ -25,6 +25,13 @@ module.exports = {
        },
        inset: {
         '90': '23rem',
+        '100': '30rem',
+        '120': '35rem',
+        '140': '40rem',
+        '1/5': '-20%',
+        '4/5': '-80%',
+        '65': '-16.5rem',
+        '1/8': '20%',
        },
        colors: {
         ladies: {
@@ -49,11 +56,18 @@ module.exports = {
      height: {
       footer: '488px',
       menu: '50rem',
+      cross: '119px',
+      crossmini: '40px',
+      video: '60vh',
+     },
+     width: {
+      cross: '7px',
+      crossmini: '3px',
      },
      spacing: {
       '100': '50rem',
     }
-     },
+     }
   },
   variants: {
     extend: {},

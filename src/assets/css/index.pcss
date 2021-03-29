@@ -11,15 +11,8 @@ button:focus {
   width: 100%;
 }
 
-#cross {
-  margin-left: 3.5rem;
-  bottom: 25%;
-  top: 25%;
-  background: white;
-  height: 119px;
-  position: absolute;
-  width: 7px;
-}
+
+
 
 #cross:after {
   background: white;
@@ -117,3 +110,16 @@ button:focus {
     opacity: 100;
   }
 
+
+
+@media (max-width: 640px) { 
+  #cross:after {
+background: white;
+    content: "";
+    height: 3px;
+    left: -19px;
+    position: absolute;
+    top: 19px;
+    width: 40px;
+  }
+ }
