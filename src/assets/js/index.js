@@ -1,3 +1,4 @@
+// Setup Carousel
 var flkty = new Flickity( '.carousel', {
   imagesLoaded: true,
   percentPosition: false,
@@ -8,7 +9,7 @@ var flkty = new Flickity( '.carousel', {
 });
 
 
-// Select elements here
+// Video controls
 const video = document.getElementById('video');
 const videoControls = document.getElementById('video-controls');
 
@@ -59,9 +60,8 @@ window.updatePlayButton = function updatePlayButton() {
 
 video.addEventListener('click', togglePlay);
 
-
+  // Add class hidden when we accept the cookies notice
 window.addNewClass = function addNewClass(){
-  // Select div element by its id attribute
   var elem = document.getElementById("toasty");
   elem.className += " hidden";
 }

@@ -18,6 +18,8 @@
 
 <body class="h-full bg-black" x-data="{show:false}" x-bind:class="{ 'model-open': show }">
 
+
+   <!-- Navigation -->
    <nav class="relative flex items-end justify-between w-full mx-auto font-light bg-black font-inter h-28 px-14">
       <div class="relative hov-underline"> <a href="#" class="relative text-2xl text-white">BigTone</a> <span
             class="absolute left-0 w-0 h-px transition-all bg-white -bottom-1"></span> </div>
@@ -32,7 +34,7 @@
          <div @click.away="show = false" class="relative z-50 w-full max-w-full mx-auto my-0">
             <div class="flex flex-col h-full h-screen overflow-hidden text-white bg-black">
 
-
+               <!-- Nav menu which opens with Alpine.js -->
                <nav
                   class="relative flex items-end justify-between w-full mx-auto font-light bg-black font-inter h-28 px-14">
                   <div class="relative hov-underline" @click={show=false}> <a href="#"
@@ -43,8 +45,9 @@
                </nav>
 
 
-
-               <div class="flex flex-col items-center text-5xl pt-36 sm:text-6xl md:text-9xl lg:text-10xl md:pl-28 md:pt-0">
+               <!-- Modal for menu -->
+               <div
+                  class="flex flex-col items-center text-5xl pt-36 sm:text-6xl md:text-9xl lg:text-10xl md:pl-28 md:pt-0">
                   <div class="relative h-24 md:h-48 md:w-100 w-80 ">
                      <div
                         class="absolute inset-x-0 bottom-0 z-10 flex items-center transform translate-x-0 translate-y-2/4 cat">
@@ -80,36 +83,51 @@
 
    </nav>
 
+   <!-- Hero banner -->
    <main style="background-image:url(assets/img/mission-img.png); background-size: auto 100%;"
-   class="relative h-full px-2 mt-12 text-6xl font-light text-white bg-center bg-top bg-no-repeat sm:px-14 lg:mt-0 font-inter">
-   <div class="relative h-full top-2/4">
-      <h1 class="absolute xl:text-10xl lg:text-9xl md:text-8xl sm:text-8xl">Shapes</h1>
-      <div class="relative sm:top-1/8 top-1/10">
-         <div id="cross" class="absolute bg-white h-crossmini sm:h-cross sm:w-cross w-crossmini sm:left-14 left-6 xl:top-4 "></div>
-         <h1 class="absolute pl-12 text-5xl xl:text-10xl lg:text-9xl md:text-8xl sm:text-7xl sm:pl-36 lg:pl-40"> Movements</h1>
+      class="relative h-full px-2 mt-12 text-6xl font-light text-white bg-center bg-top bg-no-repeat sm:px-14 lg:mt-0 font-inter">
+      <div class="relative h-full top-2/4">
+         <h1 class="absolute xl:text-10xl lg:text-9xl md:text-8xl sm:text-8xl">Shapes</h1>
+         <div class="relative sm:top-1/8 top-1/10">
+            <div id="cross"
+               class="absolute bg-white h-crossmini sm:h-cross sm:w-cross w-crossmini sm:left-14 left-6 xl:top-4 ">
+            </div>
+            <h1 class="absolute pl-12 text-5xl xl:text-10xl lg:text-9xl md:text-8xl sm:text-7xl sm:pl-36 lg:pl-40">
+               Movements</h1>
+         </div>
       </div>
-   </div>
-</main>
+   </main>
 
+
+   <!-- Intro section -->
    <section class="pb-40 mx-auto mt-40 max-w-intro md:pb-53 sm:md-0 sm:pt-54">
-      <div class="mx-5 text-3xl font-light text-white md:mx-0 sm:text-5xl font-inter"> Earthy tones, knitted patterns and metallic accents are
+      <div class="mx-5 text-3xl font-light text-white md:mx-0 sm:text-5xl font-inter"> Earthy tones, knitted patterns
+         and metallic accents are
          what characterizes this Autumn Winter collection. </div>
    </section>
-   <section class="relative flex flex-col items-center mx-auto font-light xl:justify-between xl:flex-row font-inter max-w-cat">
+
+
+   <!-- Categories section -->
+   <section
+      class="relative flex flex-col items-center mx-auto font-light xl:justify-between xl:flex-row font-inter max-w-cat">
       <div class="relative mb-12 hov-underline text-ladies xl:mb-2"> <a href="#" class="relative text-6xl sm:text-75xl"
             onclick="validationFunction()">Ladies</a>
          <div class="absolute right-0 text-sm -top-2 sm:top-0 sm:text-base">54</div> <span
             class="absolute left-0 w-0 h-px transition-all bg-ladies -bottom-4"></span>
       </div>
-      <div class="relative mb-12 hov-underline text-men xl:mb-2"> <a href="#" class="relative text-6xl sm:text-75xl">Men</a>
+      <div class="relative mb-12 hov-underline text-men xl:mb-2"> <a href="#"
+            class="relative text-6xl sm:text-75xl">Men</a>
          <div class="absolute right-0 text-sm -top-2 sm:top-0 sm:text-base">105</div> <span
             class="absolute left-0 w-0 h-px transition-all bg-men -bottom-4"></span>
       </div>
-      <div class="relative mb-12 hov-underline text-children xl:mb-2"> <a href="#" class="relative text-6xl sm:text-75xl">Children</a>
+      <div class="relative mb-12 hov-underline text-children xl:mb-2"> <a href="#"
+            class="relative text-6xl sm:text-75xl">Children</a>
          <div class="absolute right-0 text-sm -top-2 sm:top-0 sm:text-base">124</div> <span
             class="absolute left-0 w-0 h-px transition-all bg-children -bottom-4"></span>
       </div>
    </section>
+
+   <!-- Carousel section -->
    <div class="lg:ml-90 lg:pb-48">
       <div class="pt-40 text-white carousel font-inter">
          <div class="carousel-cell"> <img class="carousel-image" src="assets/img/item-1.png" alt="test">
@@ -117,21 +135,24 @@
             <h3 class="absolute text-base font-light opacity-0 caption bottom-28 left-7">28€</h3>
          </div>
          <div class="carousel-cell"> <img class="carousel-image" src="assets/img/img-02.png" alt="Test 2">
-            <h2 class="absolute w-4 text-5xl leading-tight opacity-0 -bottom-6 caption left-8">Soft Pants</h2>
-            <h3 class="absolute font-light opacity-0 caption bottom-28 left-7">28€</h3>
+            <h2 class="absolute w-4 text-5xl leading-tight opacity-0 -bottom-6 caption left-8">Green Tshirt</h2>
+            <h3 class="absolute font-light opacity-0 caption bottom-28 left-7">18€</h3>
          </div>
          <div class="carousel-cell"> <img class="carousel-image" src="assets/img/img-03.png" alt="Test 3">
-            <h2 class="absolute w-4 text-5xl leading-tight opacity-0 -bottom-6 caption left-8">Soft Pants</h2>
-            <h3 class="absolute font-light opacity-0 caption bottom-28 left-7">28€</h3>
+            <h2 class="absolute w-4 text-5xl leading-tight opacity-0 -bottom-6 caption left-8">Yellow Dress</h2>
+            <h3 class="absolute font-light opacity-0 caption bottom-28 left-7">22€</h3>
          </div>
          <div class="carousel-cell"> <img class="carousel-image" src="assets/img/img-04.png" alt="Test 4">
-            <h2 class="absolute w-4 text-5xl leading-tight opacity-0 -bottom-6 caption left-8">Soft Pants</h2>
-            <h3 class="absolute font-light opacity-0 caption bottom-28 left-7">28€</h3>
+            <h2 class="absolute w-4 text-5xl leading-tight opacity-0 -bottom-6 caption left-8">Nike Shoes</h2>
+            <h3 class="absolute font-light opacity-0 caption bottom-28 left-7">40€</h3>
          </div>
       </div>
    </div>
+
+   <!-- Video section -->
    <section>
-      <div class="relative flex items-center justify-center hidden w-full overflow-hidden md:h-screen video-controls h-video"
+      <div
+         class="relative flex items-center justify-center hidden w-full overflow-hidden md:h-screen video-controls h-video"
          id="video-controls">
          <div
             class="absolute z-30 w-8 text-6xl font-light leading-tight text-white lg:max-w-xs shape lg:text-10xl font-inter xl:left-80 sm:left-14 left-4">
@@ -154,7 +175,7 @@
    </section>
 
 
-
+   <!-- Footer section -->
    <footer
       class="flex flex-col items-center justify-between h-40 mx-10 text-lg font-light text-white md:flex-row md:mx-40 xl:mx-64 md:h-footer font-inter">
       <div class="">
@@ -200,15 +221,16 @@
       </div>
    </footer>
 
-   <div class="fixed bottom-0 right-0 w-5/6 max-w-sm m-8 alert-toast md:w-full" id="toasty">
+   <!-- Cookies notice -->
+   <div class="fixed bottom-0 right-0 z-40 w-5/6 max-w-sm m-8 alert-toast md:w-full" id="toasty">
       <input type="checkbox" class="hidden" id="footertoast">
 
       <div class="flex flex-col items-start w-full h-40 p-8 text-xs shadow-lg text-lgrey bg-cookies font-inter">
          To provide the best possible experience, our site uses both necessary and optional cookies to store
          information. By continuing to browse you are accepting our Cookie Policy.
 
-         <label class="relative mt-4 text-white cursor-pointer hov-underline close" title="close"
-            for="footertoast" onclick="addNewClass();">Accept
+         <label class="relative mt-4 text-white cursor-pointer hov-underline close" title="close" for="footertoast"
+            onclick="addNewClass();">Accept
             <span class="absolute left-0 w-0 h-px transition-all bg-dgrey -bottom-1"></span>
          </label>
       </div>
@@ -216,7 +238,7 @@
    </div>
 
 
-
+   <!-- SVG for Video section -->
    <svg style="display: none">
       <defs>
          <symbol id="play-icon" viewBox="0 0 30 34">
