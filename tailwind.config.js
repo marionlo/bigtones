@@ -12,7 +12,6 @@ module.exports = {
         '75xl' :'7.5rem',
        },
       maxWidth: {
-        'hero': '50.75rem',
         'intro' : '42.188rem',
         'cat' : '75.406rem',
        },
@@ -26,12 +25,8 @@ module.exports = {
        inset: {
         '90': '23rem',
         '100': '30rem',
-        '120': '35rem',
-        '140': '40rem',
-        '1/5': '-20%',
-        '4/5': '-80%',
-        '65': '-16.5rem',
         '1/8': '20%',
+        '1/10': '10%',
        },
        colors: {
         ladies: {
@@ -55,10 +50,12 @@ module.exports = {
      },
      height: {
       footer: '488px',
-      menu: '50rem',
+      menu: '35rem',
       cross: '119px',
       crossmini: '40px',
       video: '60vh',
+      menumob: '30rem',
+      menutab: '40rem',
      },
      width: {
       cross: '7px',

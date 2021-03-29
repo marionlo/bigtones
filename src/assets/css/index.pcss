@@ -2,6 +2,10 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+	/* -------------------------------------------------------------
+	 * Remove general outline focus on buttons
+	 * ---------------------------------------------------------- */
+
 button:focus {
   outline: 0;
   outline: 0 -webkit-focus-ring-color;
@@ -12,7 +16,9 @@ button:focus {
 }
 
 
-
+	/* -------------------------------------------------------------
+	 * Cross 
+	 * ---------------------------------------------------------- */
 
 #cross:after {
   background: white;
@@ -24,6 +30,25 @@ button:focus {
   width: 119px;
 }
 
+
+
+@media (max-width: 640px) { 
+  #cross:after {
+  background: white;
+  content: "";
+  height: 3px;
+  left: -19px;
+  position: absolute;
+  top: 19px;
+  width: 40px;
+  }
+ }
+
+
+
+	/* -------------------------------------------------------------
+	 * Carousel
+	 * ---------------------------------------------------------- */
 
 .carousel .flickity-viewport {
   width: 100%;
@@ -60,6 +85,11 @@ button:focus {
   opacity: 1;
 }
 
+
+	/* -------------------------------------------------------------
+	 * SVG play button
+	 * ---------------------------------------------------------- */
+
 .a {
   fill: none;
 }
@@ -76,6 +106,11 @@ button:focus {
   opacity: 0;
   pointer-events: none;
 }
+
+
+	/* -------------------------------------------------------------
+	 * Cookies notice
+	 * ---------------------------------------------------------- */
 
 /*Footer open/load animation*/
 	.alert-toast {
@@ -97,6 +132,10 @@ button:focus {
 	@-webkit-keyframes slide-in-top{0%{-webkit-transform:translateY(-1000px);transform:translateY(-1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes slide-in-top{0%{-webkit-transform:translateY(-1000px);transform:translateY(-1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@-webkit-keyframes slide-out-top{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}100%{-webkit-transform:translateY(-1000px);transform:translateY(-1000px);opacity:0}}@keyframes slide-out-top{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}100%{-webkit-transform:translateY(-1000px);transform:translateY(-1000px);opacity:0}}@-webkit-keyframes slide-in-bottom{0%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes slide-in-bottom{0%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@-webkit-keyframes slide-out-bottom{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}100%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}}@keyframes slide-out-bottom{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}100%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}}@-webkit-keyframes slide-in-right{0%{-webkit-transform:translateX(1000px);transform:translateX(1000px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}@keyframes slide-in-right{0%{-webkit-transform:translateX(1000px);transform:translateX(1000px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}@-webkit-keyframes fade-out-right{0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}100%{-webkit-transform:translateX(50px);transform:translateX(50px);opacity:0}}@keyframes fade-out-right{0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}100%{-webkit-transform:translateX(50px);transform:translateX(50px);opacity:0}}
  
 
+ 	/* -------------------------------------------------------------
+	 * Menu
+	 * ---------------------------------------------------------- */
+
 .model-open {
 	overflow: hidden; 
     height: 100vh;
@@ -110,16 +149,3 @@ button:focus {
     opacity: 100;
   }
 
-
-
-@media (max-width: 640px) { 
-  #cross:after {
-background: white;
-    content: "";
-    height: 3px;
-    left: -19px;
-    position: absolute;
-    top: 19px;
-    width: 40px;
-  }
- }
