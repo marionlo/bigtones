@@ -52,7 +52,7 @@ module.exports = {
      height: {
       footer: '488px',
       menu: '35rem',
-      cross: '119px',
+      cross: '120px',
       crossmini: '40px',
       video: '60vh',
       menumob: '30rem',

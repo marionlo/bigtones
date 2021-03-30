@@ -25,7 +25,7 @@
             class="absolute left-0 w-0 h-px transition-all bg-white -bottom-1"></span> </div>
 
       <div class="flex justify-center">
-         <button @click={show=true} type="button" class="relative text-2xl text-white hov-underline">Menu</Button>
+         <button @click={show=true} type="button" class="relative text-2xl text-white hov-underline" onclick="video.pause()">Menu</Button>
          <span class="absolute left-0 w-0 h-px transition-all bg-white -bottom-1"></span>
       </div>
 
@@ -84,9 +84,18 @@
    </nav>
 
    <!-- Hero banner -->
-   <main style="background-image:url(assets/img/mission-img.png); background-size: auto 100%;"
-      class="relative h-full px-2 mt-12 text-6xl font-light text-white bg-center bg-top bg-no-repeat sm:px-14 lg:mt-0 font-inter">
-      <div class="relative h-full top-2/4">
+   <main style="background-image:url('assets/img/mission-img.png'); background-size: auto 100%;"
+      class="relative flex items-center h-full px-2 mt-12 text-6xl font-light text-white bg-center bg-top bg-no-repeat sm:px-14 lg:mt-0 font-inter">
+      <h1 class="relative flex flex-col mt-40">
+         <div class="xl:text-10xl lg:text-9xl md:text-8xl sm:text-8xl">Shapes</div>
+         <div class="flex">
+            <img src="assets/img/plus.svg">
+            <span class="text-5xl xl:text-10xl lg:text-9xl md:text-8xl sm:text-7xl">
+               Movements
+            </span>
+         </div>
+      </h1>
+      <!-- <div class="relative h-full top-2/4">
          <h1 class="absolute xl:text-10xl lg:text-9xl md:text-8xl sm:text-8xl">Shapes</h1>
          <div class="relative sm:top-1/8 top-1/10">
             <div id="cross"
@@ -95,7 +104,7 @@
             <h1 class="absolute pl-12 text-5xl xl:text-10xl lg:text-9xl md:text-8xl sm:text-7xl sm:pl-36 lg:pl-40">
                Movements</h1>
          </div>
-      </div>
+      </div> -->
    </main>
 
 
@@ -128,7 +137,7 @@
    </section>
 
    <!-- Carousel section -->
-   <div class="lg:ml-90 lg:pb-48">
+   <div class="lg:pb-48">
       <div class="pt-40 text-white carousel font-inter">
          <div class="carousel-cell"> <img class="carousel-image" src="assets/img/item-1.png" alt="test">
             <h2 class="absolute w-4 text-5xl leading-tight opacity-0 -bottom-6 caption left-8">Soft Pants</h2>
@@ -155,10 +164,11 @@
          class="relative flex items-center justify-center hidden w-full overflow-hidden md:h-screen video-controls h-video"
          id="video-controls">
          <div
-            class="absolute z-30 w-8 text-6xl font-light leading-tight text-white lg:max-w-xs shape lg:text-10xl font-inter xl:left-80 sm:left-14 left-4">
-            Our Shapes</div>
+            class="absolute z-30 text-6xl font-light leading-tight text-white shape lg:text-10xl font-inter xl:left-80 sm:left-14 left-4">
+            <div>Our</div>
+            <div>Shapes</div>
+         </div>
          <button data-title="Play (k)" id="play" class="absolute z-30 flex xl:top-96">
-
             <svg class="playback-icons" width="34px" height="30px">
                <use href="#play-icon"></use>
             </svg>

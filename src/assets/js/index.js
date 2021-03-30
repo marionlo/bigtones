@@ -9,18 +9,18 @@ var flkty = new Flickity( '.carousel', {
 });
 
 
-// Video controls
+// Custom video controls, display video
 const video = document.getElementById('video');
 const videoControls = document.getElementById('video-controls');
 
 const videoWorks = !!document.createElement('video').canPlayType;
-if (videoWorks) {
+if (videoWorks) { 
   video.controls = false;
   videoControls.classList.remove('hidden');
 }
 
+// Play, pause the video
 const playButton = document.getElementById('play');
-
 window.togglePlay = function togglePlay() {
   if (video.paused || video.ended) {
     video.play();
@@ -32,11 +32,12 @@ if(playButton){
   playButton.addEventListener('click', togglePlay);
 }
 
+
+// updatePlayButton updates the playback icon and tooltip
+// depending on the playback state, remove our shape and the play button when playing
 const playbackIcons = document.querySelectorAll('.playback-icons use');
 const shape = document.querySelectorAll('.shape');
 
-// updatePlayButton updates the playback icon and tooltip
-// depending on the playback state
 function updatePlayButton() {
   playbackIcons.forEach(icon => icon.classList.toggle('hidden'));
   shape.forEach(icon => icon.classList.toggle('hidden'));
@@ -44,6 +45,7 @@ function updatePlayButton() {
 
 video.addEventListener('play', updatePlayButton);
 video.addEventListener('pause', updatePlayButton);
+
 
 window.updatePlayButton = function updatePlayButton() {
   playbackIcons.forEach(icon => icon.classList.toggle('hidden'));
@@ -55,7 +57,6 @@ window.updatePlayButton = function updatePlayButton() {
     playButton.setAttribute('data-title', 'Pause (k)')
   }
 }
-
 
 
 video.addEventListener('click', togglePlay);
