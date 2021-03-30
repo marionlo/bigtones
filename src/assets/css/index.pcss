@@ -19,25 +19,28 @@ button:focus {
 	 * Cross 
 	 * ---------------------------------------------------------- */
 
-.cross:after {
-  background: white;
-  content: "";
-  height: 7px;
-  position: absolute;
-  width: 120px;
-  margin: 56px 0 0 -56px;
+.cross{
+  max-width: 160px;
 }
 
 @media (max-width: 640px) {
-  .cross:after {
-    background: white;
-    content: "";
-    height: 3px;
-    position: absolute;
-    width: 40px;
-    margin: 17px 0 0 -17px;
+  .cross {
+    max-width: 40px
+    }
   }
-}
+
+  @media screen and (min-width: 640px) and (max-width: 768px) {
+  .cross {
+    max-width: 60px
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1280px) {
+  .cross {
+    max-width: 100px
+    }
+  }
+
 
 /* -------------------------------------------------------------
 	 * Carousel
@@ -49,6 +52,7 @@ button:focus {
 
 .flickity-viewport {
   min-height: 700px;
+  overflow: visible!important;
 }
 
 .carousel-cell {

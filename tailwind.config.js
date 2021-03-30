@@ -52,15 +52,9 @@ module.exports = {
      height: {
       footer: '488px',
       menu: '35rem',
-      cross: '120px',
-      crossmini: '40px',
       video: '60vh',
       menumob: '30rem',
       menutab: '40rem',
-     },
-     width: {
-      cross: '7px',
-      crossmini: '3px',
      },
      spacing: {
       '100': '50rem',

@@ -16,7 +16,7 @@
    <title>Bigtone - Homepage</title>
 <script src="/css.5ec3a257.js"></script></head>
 
-<body class="h-full bg-black" x-data="{show:false}" x-bind:class="{ 'model-open': show }">
+<body class="h-full overflow-x-hidden bg-black" x-data="{show:false}" x-bind:class="{ 'model-open': show }">
 
 
    <!-- Navigation -->
@@ -72,27 +72,17 @@
    </nav>
 
    <!-- Hero banner -->
-   <main style="background-image:url('/mission-img.0f4483e2.png'); background-size: auto 100%;" class="relative flex items-center h-full px-2 mt-12 text-6xl font-light text-white bg-center bg-top bg-no-repeat sm:px-14 lg:mt-0 font-inter">
-      <h1 class="relative flex flex-col mt-40">
+   <section style="background-image:url('/mission-img.0f4483e2.png'); background-size: auto 100%;" class="relative flex items-center h-full px-2 mt-12 text-6xl font-light text-white bg-center bg-top bg-no-repeat sm:px-14 lg:mt-0 font-inter">
+      <h1 class="relative flex flex-col mt-40 ml-4 sm:ml-0">
          <div class="xl:text-10xl lg:text-9xl md:text-8xl sm:text-8xl">Shapes</div>
-         <div class="flex">
-            <img src="/plus.f1633c30.svg">
+         <div class="flex items-center">
+            <img class="cross" src="/plus.f1633c30.svg">
             <span class="text-5xl xl:text-10xl lg:text-9xl md:text-8xl sm:text-7xl">
                Movements
             </span>
          </div>
       </h1>
-      <!-- <div class="relative h-full top-2/4">
-         <h1 class="absolute xl:text-10xl lg:text-9xl md:text-8xl sm:text-8xl">Shapes</h1>
-         <div class="relative sm:top-1/8 top-1/10">
-            <div id="cross"
-               class="absolute bg-white h-crossmini sm:h-cross sm:w-cross w-crossmini sm:left-14 left-6 xl:top-4 ">
-            </div>
-            <h1 class="absolute pl-12 text-5xl xl:text-10xl lg:text-9xl md:text-8xl sm:text-7xl sm:pl-36 lg:pl-40">
-               Movements</h1>
-         </div>
-      </div> -->
-   </main>
+   </section>
 
 
    <!-- Intro section -->
@@ -118,7 +108,7 @@
 
    <!-- Carousel section -->
    <div class="lg:pb-48">
-      <div class="pt-40 text-white carousel font-inter">
+      <div class="pt-40 mx-auto text-white carousel font-inter max-w-cat">
          <div class="carousel-cell"> <img class="carousel-image" src="/item-1.84e02c4d.png" alt="test">
             <h2 class="absolute w-4 text-5xl leading-tight opacity-0 -bottom-6 caption left-8">Soft Pants</h2>
             <h3 class="absolute text-base font-light opacity-0 caption bottom-28 left-7">28€</h3>
@@ -145,10 +135,8 @@
             <div>Our</div>
             <div>Shapes</div>
          </div>
-         <button data-title="Play (k)" id="play" class="absolute z-30 flex xl:top-96">
-            <svg class="playback-icons" width="34px" height="30px">
-               <use href="#play-icon"></use>
-            </svg>
+         <button data-title="Play (k)" id="play" class="absolute z-30 flex items-center xl:top-96">
+            <img src="/icon-play.35b36f0f.svg">
             <span class="leading-7 text-white font-inter pl-3.5 shape">Play</span>
          </button>
          <video controls="" class="absolute z-10 object-fill w-full video" id="video" preload="metadata" poster="/video-img.433a7490.png">
@@ -158,7 +146,7 @@
 
       </div>
 
-   </section>
+   </section> 
 
 
    <!-- Footer section -->
@@ -214,25 +202,13 @@
          To provide the best possible experience, our site uses both necessary and optional cookies to store
          information. By continuing to browse you are accepting our Cookie Policy.
 
-         <label class="relative mt-4 text-white cursor-pointer hov-underline close" title="close" for="footertoast" onclick="addNewClass();">Accept
+         <label class="relative mt-4 text-white cursor-pointer hov-underline close" title="close" for="footertoast" onclick="acceptCookies()">Accept
             <span class="absolute left-0 w-0 h-px transition-all bg-dgrey -bottom-1"></span>
          </label>
       </div>
 
    </div>
 
-
-   <!-- SVG for Video section -->
-   <svg style="display: none">
-      <defs>
-         <symbol id="play-icon" viewBox="0 0 30 34">
-            <g class="a" transform="translate(30) rotate(90)">
-               <path class="b" d="M17,0,34,30H0Z"></path>
-               <path class="c" d="M 17 8.113386154174805 L 6.864252090454102 26 L 27.1357479095459 26 L 17 8.113386154174805 M 17 0 L 34 30 L 0 30 L 17 0 Z"></path>
-            </g>
-         </symbol>
-      </defs>
-   </svg>
    <script src="/js.5c615dc2.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js"></script>
 
